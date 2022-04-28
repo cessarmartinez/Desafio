@@ -1,0 +1,101 @@
+
+/*Fuente*/
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+/*Variables*/
+$background-color: #5f00b8;
+/*Reseteo*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;   
+    font-family: 'Source Sans Pro', sans-serif;
+}
+/* Nav */ 
+.bg-lav{
+    background-color: $background-color;
+    #navbarNav {
+        transition: all 0.5s;
+        .nav-link:hover{
+            font-weight: bold;
+          }
+    }
+  }
+/*Index*/
+#index{
+    min-height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+    .section__div{
+        display: flex;
+    }
+}
+@media screen and (min-width: 768px){
+    .section__img{
+        float:right;
+    }
+}
+
+/*CARTELERA*/
+.mb-6 {
+    margin-bottom: 4rem;
+    .card{
+        width: 18rem!important;
+        .card-img-top:hover {
+            opacity: 0.9;
+        }
+        .btn {
+            background-color:  $background-color!important;
+            transform: scale(0.9);
+            &:hover{
+                transform: scale(1);
+                transition: transform 0.5s;
+              }
+          }
+    }
+  }
+/* Footer */
+footer {
+    position: absolute;
+    width: 100%;
+    background-color:$background-color;
+    height: 100px;
+    margin-top: 0px;
+    display: flex;
+    justify-content: end;
+    .anchoFooter {
+        margin-top: 30px;
+        .redes {
+            display: inline-block;
+            .bi-facebook {
+                font-size: 30px;
+                text-align: center;
+                margin-left: 5px;
+                margin-right: 5px;
+                color: #fff;
+                &:hover {
+                    color: #3b5998;
+                  }
+            }
+            .bi-twitter {
+                font-size: 30px;
+                text-align: center;
+                margin-left: 5px;
+                margin-right: 5px;
+                color: #fff;
+                &:hover {
+                    color: #38a5ff;
+                  }
+              }
+              .bi-instagram {
+                font-size: 30px;
+                text-align: center;
+                margin-left: 5px;
+                margin-right: 5px;
+                color: #fff;
+                &:hover {
+                    color: #ec09b3;
+                  }
+              }
+        }
+      }
+  }
