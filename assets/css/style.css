@@ -1,110 +1,81 @@
-
 /*Fuente*/
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap");
+/*Variables*/
 /*Reseteo*/
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;   
-    font-family: 'Source Sans Pro', sans-serif;
-}
-/* Nav */ 
-.bg-lav{
-    background-color: #5f00b8;
-  }
-#navbarNav {
-    transition: all 0.5s;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Source Sans Pro', sans-serif; }
 
-}
-.nav-link:hover{
-  font-weight: bold;
-}
+/* Nav */
+.bg-lav {
+  background-color: #5f00b8; }
+  .bg-lav #navbarNav {
+    transition: all 0.5s; }
+    .bg-lav #navbarNav .nav-link:hover {
+      font-weight: bold; }
+
 /*Index*/
-#index{
-    min-height: 100vh;
-    width: 80%;
-    margin: 0 auto;
-}
-.section__div{
-    display: flex;
-}
-@media screen and (min-width: 768px){
-    .section__img{
-        float:right;
-    }
-}
+#index {
+  min-height: 100vh;
+  width: 80%;
+  margin: 0 auto; }
+  #index .section__div {
+    display: flex; }
+
+@media screen and (min-width: 768px) {
+  .section__img {
+    float: right; } }
 
 /*CARTELERA*/
 .mb-6 {
-    margin-bottom: 4rem;
-  }
-  
-  
-  .card-img-top:hover {
-    opacity: 0.9;
-  }
-  
-  
-  .btn {
-    background-color:  #5f00b8!important;
-    transform: scale(0.9)
-  }
-  
-  .btn:hover{
-    transform: scale(1);
-    transition: transform 0.5s;
-  }
+  margin-bottom: 4rem; }
+  .mb-6 .card {
+    width: 18rem !important; }
+    .mb-6 .card .card-img-top:hover {
+      opacity: 0.9; }
+    .mb-6 .card .btn {
+      background-color: #5f00b8 !important;
+      transform: scale(0.9); }
+      .mb-6 .card .btn:hover {
+        transform: scale(1);
+        transition: transform 0.5s; }
 
 /* Footer */
 footer {
-    position: absolute;
-    width: 100%;
-    background-color:#5f00b8;
-    height: 100px;
-    margin-top: 0px;
-    display: flex;
-    justify-content: end;
-  }
-  
-  .anchoFooter {
-    margin-top: 30px;
-  }
-  
-  .redes {
-    display: inline-block;
-  }
-  
-  .bi-facebook {
-    font-size: 30px;
-    text-align: center;
-    margin-left: 5px;
-    margin-right: 5px;
-    color: #fff;
-  }
-  
-  .bi-facebook:hover {
-    color: #3b5998;
-  }
-  
-  .bi-twitter {
-    font-size: 30px;
-    text-align: center;
-    margin-left: 5px;
-    margin-right: 5px;
-    color: #fff;
-  }
-  
-  .bi-twitter:hover {
-    color: #38a5ff;
-  }
-  
-  .bi-instagram {
-    font-size: 30px;
-    text-align: center;
-    margin-left: 5px;
-    margin-right: 5px;
-    color: #fff;
-  }
-  .bi-instagram:hover {
-    color: #ec09b3;
-  }
+  position: absolute;
+  width: 100%;
+  background-color: #5f00b8;
+  height: 100px;
+  margin-top: 0px;
+  display: flex;
+  justify-content: end; }
+  footer .anchoFooter {
+    margin-top: 30px; }
+    footer .anchoFooter .redes {
+      display: inline-block; }
+      footer .anchoFooter .redes .bi-facebook {
+        font-size: 30px;
+        text-align: center;
+        margin-left: 5px;
+        margin-right: 5px;
+        color: #fff; }
+        footer .anchoFooter .redes .bi-facebook:hover {
+          color: #3b5998; }
+      footer .anchoFooter .redes .bi-twitter {
+        font-size: 30px;
+        text-align: center;
+        margin-left: 5px;
+        margin-right: 5px;
+        color: #fff; }
+        footer .anchoFooter .redes .bi-twitter:hover {
+          color: #38a5ff; }
+      footer .anchoFooter .redes .bi-instagram {
+        font-size: 30px;
+        text-align: center;
+        margin-left: 5px;
+        margin-right: 5px;
+        color: #fff; }
+        footer .anchoFooter .redes .bi-instagram:hover {
+          color: #ec09b3; }
