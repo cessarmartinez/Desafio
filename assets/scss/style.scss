@@ -21,13 +21,23 @@ $background-color: #5f00b8;
     }
   }
 /*Index*/
+@mixin fontSize ($size, $weight) {
+    font-size: $size;
+    font-weight: $weight; 
+    
+}
+
 #index{
     min-height: 100vh;
     width: 80%;
     margin: 0 auto;
-    .section__div{
-        display: flex;
+    .section__h1{
+        @include fontSize( 30px, 1000)
     }
+    .section__p{
+        @include fontSize( 18px, 100)
+    }
+
 }
 @media screen and (min-width: 768px){
     .section__img{
@@ -53,7 +63,24 @@ $background-color: #5f00b8;
           }
     }
   }
+/*Contacto*/
+.boton{
+    text-align: center;
+    color: white;
+    border-radius: 30px;
+    border: 1px solid black;
+}
+.btn__contact{
+    @extend .boton;
+    background-color: $background-color;
+}
 /* Footer */
+
+$redes: (
+    Facebook: #3b5998,
+    Twitter: #38a5ff,
+    Instagram: #ec09b3,
+);
 footer {
     position: absolute;
     width: 100%;
@@ -73,7 +100,7 @@ footer {
                 margin-right: 5px;
                 color: #fff;
                 &:hover {
-                    color: #3b5998;
+                    color: map-get($map: $redes, $key: Facebook );
                   }
             }
             .bi-twitter {
@@ -83,7 +110,7 @@ footer {
                 margin-right: 5px;
                 color: #fff;
                 &:hover {
-                    color: #38a5ff;
+                    color: map-get($map: $redes, $key: Twitter );
                   }
               }
               .bi-instagram {
@@ -93,7 +120,7 @@ footer {
                 margin-right: 5px;
                 color: #fff;
                 &:hover {
-                    color: #ec09b3;
+                    color: map-get($map: $redes, $key: Instagram );
                   }
               }
         }
