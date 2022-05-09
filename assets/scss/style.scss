@@ -2,7 +2,28 @@
 /*Fuente*/
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
 /*Variables*/
-$background-color: #5f00b8;
+$background-color: #000000;
+$btn-color: rgb(255, 140, 0);
+/*Mixin*/
+@mixin redes {
+    font-size: 30px;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #fff;
+
+}
+/*Extend*/
+.contenedor{
+    display:flex;
+    justify-content: space-between;
+}
+/*Map*/
+$redes: (
+    Facebook: #3b5998,
+    Twitter: #38a5ff,
+    Instagram: #ec09b3,
+);
 /*Reseteo*/
 * {
     box-sizing: border-box;
@@ -10,41 +31,67 @@ $background-color: #5f00b8;
     padding: 0;   
     font-family: 'Source Sans Pro', sans-serif;
 }
+
+/*Botones*/
+.btn {
+    background-color:  $btn-color!important;
+    transform: scale(0.9);
+    &:hover{
+        transform: scale(1);
+        transition: transform 0.5s;
+      }
+  }
 /* Nav */ 
-.bg-lav{
+.navbar{
     background-color: $background-color;
+    #logo{
+        height: 80px;
+        width: 80px;
+    }
     #navbarNav {
         transition: all 0.5s;
+        .nav-link{
+            font-size: 20px;
+
+        }
         .nav-link:hover{
             font-weight: bold;
           }
     }
   }
 /*Index*/
+.titulo{
+    background-color: rgb(255, 140, 0);
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
 @mixin fontSize ($size, $weight) {
     font-size: $size;
     font-weight: $weight; 
     
 }
-
+.contenedor-carousel{
+    @extend .contenedor;
+    .carousel__titulo{
+        text-align: left;
+    }
+}
 #index{
-    min-height: 100vh;
-    width: 80%;
     margin: 0 auto;
-    .section__h1{
-        @include fontSize( 30px, 1000)
-    }
-    .section__p{
-        @include fontSize( 18px, 100)
-    }
-
-}
-@media screen and (min-width: 768px){
-    .section__img{
-        float:right;
-    }
+    width: 80%;
 }
 
+/*Nosotros*/
+.contenedor-nosotros{
+    @extend .contenedor;
+}
+@media screen and (max-width: 768px){
+    .contenedor-nosotros{
+        flex-direction: column;
+    }
+}
 /*CARTELERA*/
 .mb-6 {
     margin-bottom: 4rem;
@@ -53,72 +100,35 @@ $background-color: #5f00b8;
         .card-img-top:hover {
             opacity: 0.9;
         }
-        .btn {
-            background-color:  $background-color!important;
-            transform: scale(0.9);
-            &:hover{
-                transform: scale(1);
-                transition: transform 0.5s;
-              }
-          }
     }
   }
 /*Contacto*/
-.boton{
-    text-align: center;
-    color: white;
-    border-radius: 30px;
-    border: 1px solid black;
-}
-.btn__contact{
-    @extend .boton;
-    background-color: $background-color;
-}
 /* Footer */
 
-$redes: (
-    Facebook: #3b5998,
-    Twitter: #38a5ff,
-    Instagram: #ec09b3,
-);
 footer {
-    position: absolute;
     width: 100%;
     background-color:$background-color;
-    height: 100px;
-    margin-top: 0px;
     display: flex;
     justify-content: end;
     .anchoFooter {
-        margin-top: 30px;
+        margin-top: 10px;
+        margin-bottom: 10px;
         .redes {
             display: inline-block;
             .bi-facebook {
-                font-size: 30px;
-                text-align: center;
-                margin-left: 5px;
-                margin-right: 5px;
-                color: #fff;
+                @include redes();
                 &:hover {
                     color: map-get($map: $redes, $key: Facebook );
                   }
             }
             .bi-twitter {
-                font-size: 30px;
-                text-align: center;
-                margin-left: 5px;
-                margin-right: 5px;
-                color: #fff;
+                @include redes();
                 &:hover {
                     color: map-get($map: $redes, $key: Twitter );
                   }
               }
               .bi-instagram {
-                font-size: 30px;
-                text-align: center;
-                margin-left: 5px;
-                margin-right: 5px;
-                color: #fff;
+                @include redes();
                 &:hover {
                     color: map-get($map: $redes, $key: Instagram );
                   }
